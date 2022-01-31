@@ -26,7 +26,8 @@ const styles = StyleSheet.create({
         marginRight: 5
     },
     input: {
-        fontSize: 16
+        fontSize: 16,
+        color: '#f3c8df'
     }
 })
 

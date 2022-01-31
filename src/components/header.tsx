@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     logo: {
         fontFamily: 'Poppins_900Black',
         fontSize: 25,
-        fontWeight: '900',
+        fontWeight: '800',
         marginBottom: 10
     }
 })

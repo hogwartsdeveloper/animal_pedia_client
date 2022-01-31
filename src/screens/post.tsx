@@ -1,11 +1,11 @@
 import { FC } from "react";
 import { View } from "react-native";
 
-const SignUp: FC = () => {
+const Post: FC = () => {
     return (
         <View>
         </View>
     );
 };
 
-export default SignUp;
+export default Post;
