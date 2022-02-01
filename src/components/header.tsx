@@ -1,12 +1,13 @@
 import { FC } from "react";
-import { StyleSheet, Text, TextInput, View } from "react-native";
-import { Poppins_900Black, useFonts } from "@expo-google-fonts/poppins";
+import { StyleSheet, Text, View } from "react-native";
+import { SpaceMono_700Bold, useFonts } from "@expo-google-fonts/space-mono";
 import AppLoading from "expo-app-loading";
 import SearchInput from "./searchInput";
+import { FontAwesome5 } from '@expo/vector-icons';
 
 const Header: FC = () => {
     const [fontsLoaded] = useFonts({
-        Poppins_900Black
+        SpaceMono_700Bold
     });
 
     if (!fontsLoaded) {
@@ -15,7 +16,14 @@ const Header: FC = () => {
 
     return (
         <View style={styles.container}>
-            <Text style={styles.logo}>Animal pediA</Text>
+            <View style={{flexDirection: 'row', alignItems: 'center', marginBottom: 20}}>
+                <FontAwesome5 style={styles.catIcon} name="cat" size={40}/>
+                <View>
+                    <Text style={styles.logo}>Animal</Text>
+                    <Text style={styles.logo}>pediA</Text>
+                </View>
+            </View>
+            
             <SearchInput />
         </View>
     );
@@ -24,14 +32,18 @@ const Header: FC = () => {
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'column',
-        marginTop: 40,
+        marginTop: 20,
         padding: 15
     },
     logo: {
-        fontFamily: 'Poppins_900Black',
-        fontSize: 25,
-        fontWeight: '800',
-        marginBottom: 10
+        fontFamily: 'SpaceMono_700Bold',
+        fontSize: 20,
+        fontWeight: '700',
+        marginBottom: -5
+    },
+    catIcon: {
+        color: '#fbd52c',
+        marginRight: 5
     }
 })
 

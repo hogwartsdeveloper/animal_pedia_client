@@ -13,7 +13,7 @@ const Tab = createBottomTabNavigator();
 
 
 
-const Tabs = () => {
+const Tabs: FC = () => {
     return (
         <Tab.Navigator
             tabBarOptions={{
@@ -35,14 +35,14 @@ const Tabs = () => {
                     <View style={styles.tab}>
                         <Ionicons 
                             name="planet-outline" 
-                            size={30}
+                            size={25}
                             style={{
-                                color: focused ? '#e32f45' : '#748c94'
+                                color: focused ? '#fbd52c' : '#000'
                             }}
                         />
                         <Text style={{
-                            color: focused ? '#e32f45' : '#748c94',
-                            fontSize: 12
+                            color: focused ? '#fbd52c' : '#000',
+                            fontSize: 11
                         }}>Лента</Text>
                     </View>
                 )
@@ -54,14 +54,14 @@ const Tabs = () => {
                     <View style={styles.tab}>
                         <Entypo 
                             name="bookmark" 
-                            size={30}
+                            size={25}
                             style={{
-                                color: focused ? '#e32f45' : '#748c94'
+                                color: focused ? '#fbd52c' : '#000'
                             }}
                         />
                         <Text style={{
-                            color: focused ? '#e32f45' : '#748c94',
-                            fontSize: 12
+                            color: focused ? '#fbd52c' : '#000',
+                            fontSize: 11
                         }}>Сохранено</Text>
                     </View>
                 )
@@ -74,7 +74,7 @@ const Tabs = () => {
                             name="add-circle" 
                             size={70}
                             style={{
-                                color: '#e32f45'
+                                color: '#fbd52c'
                             }}
                         />
                     ),
@@ -88,14 +88,14 @@ const Tabs = () => {
                     <View style={styles.tab}>
                         <MaterialCommunityIcons 
                             name="history" 
-                            size={30}
+                            size={25}
                             style={{
-                                color: focused ? '#e32f45' : '#748c94'
+                                color: focused ? '#fbd52c' : '#000'
                             }}
                         />
                         <Text style={{
-                            color: focused ? '#e32f45' : '#748c94',
-                            fontSize: 12
+                            color: focused ? '#fbd52c' : '#000',
+                            fontSize: 11
                         }}>История</Text>
                     </View>
                 )
@@ -105,14 +105,14 @@ const Tabs = () => {
                     <View style={styles.tab}>
                         <AntDesign 
                             name="user" 
-                            size={30}
+                            size={25}
                             style={{
-                                color: focused ? '#e32f45' : '#748c94'
+                                color: focused ? '#fbd52c' : '#000'
                             }}
                         />
                         <Text style={{
-                            color: focused ? '#e32f45' : '#748c94',
-                            fontSize: 12
+                            color: focused ? '#fbd52c' : '#000',
+                            fontSize: 11
                         }}>Кабинет</Text>
                     </View>
                 )

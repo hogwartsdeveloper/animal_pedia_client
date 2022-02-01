@@ -6,7 +6,6 @@ const Ribbon: FC = () => {
     return (
         <View>
             <Header />
-            <Text>Лента</Text>
         </View>
     );
 };
