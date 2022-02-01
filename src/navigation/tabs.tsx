@@ -20,7 +20,7 @@ const Tabs: FC = () => {
                 showLabel: false,
                 style: {
                     position: 'absolute',
-                    bottom: 25,
+                    bottom: 10,
                     left: 20,
                     right: 20,
                     backgroundColor: '#fff',
@@ -49,7 +49,7 @@ const Tabs: FC = () => {
             }}/>
             
 
-            <Tab.Screen name="Save" component={Login} options={{
+            <Tab.Screen name="Save" component={Post} options={{
                 tabBarIcon: ({focused}) => (
                     <View style={styles.tab}>
                         <Entypo 
@@ -100,7 +100,7 @@ const Tabs: FC = () => {
                     </View>
                 )
             }}/>
-            <Tab.Screen name="Cabinet" component={SignUp} options={{
+            <Tab.Screen name="Cabinet" component={Login} options={{
                 tabBarIcon: ({focused}) => (
                     <View style={styles.tab}>
                         <AntDesign 

@@ -1,16 +1,23 @@
 import { FC } from "react";
-import { TextInput } from "react-native";
+import { StyleProp, TextInput, TextStyle } from "react-native";
 
 interface Props {
     placeholder: string;
     onChangeText: (text: string) => void;
     secureTextEntry?: boolean;
     placeholderTextColor?: string;
+    style?: StyleProp<TextStyle> | undefined;
 }
 
-const Input: FC<Props> = ({placeholder, onChangeText, secureTextEntry, placeholderTextColor}) => {
+const Input: FC<Props> = ({placeholder, onChangeText, secureTextEntry, placeholderTextColor, style}) => {
     return (
-        <TextInput placeholder={placeholder} secureTextEntry={secureTextEntry || false} onChangeText={onChangeText} placeholderTextColor={placeholderTextColor}/>
+        <TextInput 
+            placeholder={placeholder} 
+            secureTextEntry={secureTextEntry || false} 
+            onChangeText={onChangeText} 
+            placeholderTextColor={placeholderTextColor}
+            style={style}
+        />
     );
 };
 
