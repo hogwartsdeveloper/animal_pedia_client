@@ -1,12 +1,15 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import { StyleSheet, TextInput, View } from "react-native";
 import { AntDesign } from "@expo/vector-icons"
+import Input from "./UI/input";
 
 const SearchInput: FC = () => {
+    const [search, setSearch] = useState<string>('')
+
     return (
         <View style={styles.container}>
             <AntDesign style={styles.searchIcon} name="search1"/>
-            <TextInput style={styles.input} placeholder="Поиск по Animal pedia" placeholderTextColor='#fbd52c'/>
+            <Input placeholder="Поиск по Animal pedia" onChangeText={(text) => setSearch(text)} placeholderTextColor='#fbd52c'/>
         </View>
     );
 };
