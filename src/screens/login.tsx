@@ -7,14 +7,14 @@ const Login: FC = () => {
     const [password, setPassword] = useState<string>('')
 
     const inputs: Array<IInput> = [
-        {id: 1, icon: 'mail', placeholder: "Введите email", onChangeText: (text) => setEmail(text)},
-        {id: 2, icon: 'lock', placeholder: "Введите пароль", onChangeText: (text) => setPassword(text)},
+        {id: 1, icon: 'mail', placeholder: "Введите email", onChangeText: (text) => setEmail(text), value: email},
+        {id: 2, icon: 'lock', placeholder: "Введите пароль", onChangeText: (text) => setPassword(text), value: password},
     ]
 
     return (
         <LoginForm 
             welcomeText="Save the world"
-            welcomeDescription="Хватит жрать животных"
+            welcomeDescription="Войдите в свой аккаунт!"
             inputs={inputs}
             buttonText="Войти"
         />
