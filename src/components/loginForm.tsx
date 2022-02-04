@@ -3,6 +3,7 @@ import { View, Image, Text, StyleSheet } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 import Input from "./UI/input";
 import { IInput } from "../types/types";
+import { TouchableOpacity } from "react-native-gesture-handler";
 
 
 interface Props {
@@ -34,13 +35,15 @@ const LoginForm: FC<Props> = ({welcomeText, welcomeDescription, inputs, buttonTe
                         placeholder={input.placeholder}
                         onChangeText={input.onChangeText}
                         style={{paddingHorizontal: 10}}
+                        value={input.value}
                     /> 
                 </View>
             ))}
-            
-            <View style={styles.button}>
-                <Text onPress={onPress}>{buttonText}</Text>
-            </View>
+            <TouchableOpacity onPress={onPress}>
+                <View style={styles.button}>
+                    <Text>{buttonText}</Text>
+                </View>
+            </TouchableOpacity>
 
             <Text style={{
                     alignSelf: 'center',

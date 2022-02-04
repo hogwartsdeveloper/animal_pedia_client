@@ -4,4 +4,5 @@ export interface IInput {
     placeholder: string;
     onChangeText: (text: string) => void;
     secureText?: boolean;
+    value: string;
 }

@@ -1,6 +1,6 @@
 import { FC, useState } from "react";
 import LoginForm from "../components/loginForm";
-import { fetchCreateNewUser, registration } from "../store/action-creators/user";
+import { fetchCreateNewUser } from "../store/action-creators/user";
 import { IInput } from "../types/types";
 
 const SignUp: FC = () => {
@@ -8,9 +8,15 @@ const SignUp: FC = () => {
     const [password, setPassword] = useState<string>('')
 
     const inputs: Array<IInput> = [
-        {id: 1, icon: 'mail', placeholder: "Введите email", onChangeText: (text) => setEmail(text)},
-        {id: 2, icon: 'lock', placeholder: "Введите пароль", onChangeText: (text) => setPassword(text)},
+        {id: 1, icon: 'mail', placeholder: "Введите email", onChangeText: (text) => setEmail(text), value: email},
+        {id: 2, icon: 'lock', placeholder: "Введите пароль", onChangeText: (text) => setPassword(text), value: password},
     ]
+
+    const registration = (email: string, password: string) => {
+        fetchCreateNewUser(email, password)
+        setEmail('')
+        setPassword('')
+    }
 
     return (
         <LoginForm 

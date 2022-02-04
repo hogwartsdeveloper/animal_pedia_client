@@ -7,9 +7,10 @@ interface Props {
     secureTextEntry?: boolean;
     placeholderTextColor?: string;
     style?: StyleProp<TextStyle> | undefined;
+    value: string
 }
 
-const Input: FC<Props> = ({placeholder, onChangeText, secureTextEntry, placeholderTextColor, style}) => {
+const Input: FC<Props> = ({placeholder, onChangeText, secureTextEntry, placeholderTextColor, style, value}) => {
     return (
         <TextInput 
             placeholder={placeholder} 
@@ -17,6 +18,7 @@ const Input: FC<Props> = ({placeholder, onChangeText, secureTextEntry, placehold
             onChangeText={onChangeText} 
             placeholderTextColor={placeholderTextColor}
             style={style}
+            value={value}
         />
     );
 };
