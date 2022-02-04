@@ -6,7 +6,7 @@ import { UserAction, UserActionTypes } from "../../types/user"
 export const fetchCreateNewUser = (email: string, password:string) => {
     return async (dispatch: Dispatch<UserAction>) => {
         try {
-            const response = await axios.post(`http://172.20.10.3:5001/users`, {
+            const response = await axios.post(`http://172.20.10.3:5001/auth/registration`, {
                 email,
                 password
             })
