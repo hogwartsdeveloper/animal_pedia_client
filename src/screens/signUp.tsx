@@ -1,5 +1,6 @@
 import { FC, useState } from "react";
 import LoginForm from "../components/loginForm";
+import { fetchCreateNewUser, registration } from "../store/action-creators/user";
 import { IInput } from "../types/types";
 
 const SignUp: FC = () => {
@@ -16,7 +17,8 @@ const SignUp: FC = () => {
             welcomeText="Save the world"
             welcomeDescription="Хватит жрать животных"
             inputs={inputs}
-            buttonText="Войти"
+            buttonText="Регистрация"
+            onPress={() => registration(email, password)}
         />
     );
 };

@@ -100,7 +100,7 @@ const Tabs: FC = () => {
                     </View>
                 )
             }}/>
-            <Tab.Screen name="Cabinet" component={Login} options={{
+            <Tab.Screen name="Cabinet" component={SignUp} options={{
                 tabBarIcon: ({focused}) => (
                     <View style={styles.tab}>
                         <AntDesign 

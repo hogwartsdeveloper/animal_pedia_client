@@ -10,9 +10,10 @@ interface Props {
     welcomeDescription: string;
     inputs: IInput[];
     buttonText: string;
+    onPress?: () => void;
 }
 
-const LoginForm: FC<Props> = ({welcomeText, welcomeDescription, inputs, buttonText}) => {
+const LoginForm: FC<Props> = ({welcomeText, welcomeDescription, inputs, buttonText, onPress}) => {
     return (
         <View style={styles.container}>
             <Image 
@@ -38,7 +39,7 @@ const LoginForm: FC<Props> = ({welcomeText, welcomeDescription, inputs, buttonTe
             ))}
             
             <View style={styles.button}>
-                <Text>{buttonText}</Text>
+                <Text onPress={onPress}>{buttonText}</Text>
             </View>
 
             <Text style={{
