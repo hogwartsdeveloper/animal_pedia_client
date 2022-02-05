@@ -4,6 +4,7 @@ import { AntDesign } from "@expo/vector-icons";
 import Input from "./UI/input";
 import { IInput } from "../types/types";
 import { TouchableOpacity } from "react-native-gesture-handler";
+import { Button } from ".";
 
 
 interface Props {
@@ -11,7 +12,7 @@ interface Props {
     welcomeDescription: string;
     inputs: IInput[];
     buttonText: string;
-    onPress?: () => void;
+    onPress: () => void;
     loginText: string;
     loginComponent: string;
     loginNavigate: () => void;
@@ -51,11 +52,7 @@ const LoginForm: FC<Props> = ({
                     /> 
                 </View>
             ))}
-            <TouchableOpacity onPress={onPress}>
-                <View style={styles.button}>
-                    <Text>{buttonText}</Text>
-                </View>
-            </TouchableOpacity>
+            <Button buttonText={buttonText} onPress={onPress}/>
             
             <View style={styles.loginContainer}>
                 <Text
@@ -108,15 +105,6 @@ const styles = StyleSheet.create({
         borderColor: '#fbd52c',
         borderRadius: 23,
         paddingVertical: 2
-    },
-    button: {
-        alignItems: 'center',
-        justifyContent: 'center',
-        marginTop: 20,
-        backgroundColor: '#fbd52c',
-        paddingVertical: 8,
-        borderRadius: 23,
-        marginHorizontal: 55,
     },
     loginContainer: {
         flexDirection: 'row',
