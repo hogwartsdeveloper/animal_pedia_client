@@ -12,9 +12,21 @@ interface Props {
     inputs: IInput[];
     buttonText: string;
     onPress?: () => void;
+    loginText: string;
+    loginComponent: string;
+    loginNavigate: () => void;
 }
 
-const LoginForm: FC<Props> = ({welcomeText, welcomeDescription, inputs, buttonText, onPress}) => {
+const LoginForm: FC<Props> = ({
+                                welcomeText, 
+                                welcomeDescription, 
+                                inputs, 
+                                buttonText, 
+                                onPress, 
+                                loginText,
+                                loginComponent,
+                                loginNavigate
+                            }) => {
     return (
         <View style={styles.container}>
             <Image 
@@ -44,12 +56,24 @@ const LoginForm: FC<Props> = ({welcomeText, welcomeDescription, inputs, buttonTe
                     <Text>{buttonText}</Text>
                 </View>
             </TouchableOpacity>
+            
+            <View style={styles.loginContainer}>
+                <Text
+                    style={{
+                        alignSelf: 'center',
+                        color: '#fbd52c',
+                        paddingVertical: 10,
+                    }}
+                >
+                    {loginText}
+                </Text>
+                <TouchableOpacity onPress={loginNavigate}>
+                    <Text style={styles.loginLink}>
+                        {loginComponent}
+                    </Text>
+                </TouchableOpacity>
+            </View>
 
-            <Text style={{
-                    alignSelf: 'center',
-                    color: '#fbd52c',
-                    paddingVertical: 10
-                }}>New User</Text>
         </View>
     );
 };
@@ -93,6 +117,16 @@ const styles = StyleSheet.create({
         paddingVertical: 8,
         borderRadius: 23,
         marginHorizontal: 55,
+    },
+    loginContainer: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    loginLink: {
+        color: '#9985f7',
+        marginLeft: 5,
+        fontSize: 16
     }
 })
 

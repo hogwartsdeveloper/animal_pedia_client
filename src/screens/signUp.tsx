@@ -29,6 +29,10 @@ const SignUp: FC = () => {
         fetchCreateNewUser(email, password)
     }
 
+    const loginNavigate = () => {
+        navigation.navigate('login')
+    }
+
     return (
         <LoginForm 
             welcomeText="Save the world"
@@ -36,6 +40,9 @@ const SignUp: FC = () => {
             inputs={inputs}
             buttonText="Регистрация"
             onPress={() => registration(email, password)}
+            loginText="Вы зарегистрированы?"
+            loginComponent="Войти"
+            loginNavigate={loginNavigate}
         />
     );
 };
