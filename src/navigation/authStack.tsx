@@ -5,17 +5,17 @@ import SignUp from "../screens/signUp";
 import Login from "../screens/login";
 import Tabs from "./tabs";
 
-const { Navigator, Screen } = createStackNavigator();
+const Stack = createStackNavigator();
 
 const AuthStack: FC = () => {
     return (
-        <Navigator screenOptions={{headerShown: false}}>
-            <Screen name="tab" component={Tabs} />
-            <Screen name="signUp" component={SignUp} />
-            <Screen name="login" component={Login} />
-            <Screen name="ribbon" component={Ribbon} />
+        <Stack.Navigator screenOptions={{headerShown: false}}>
+            <Stack.Screen name="tab" component={Tabs} />
+            <Stack.Screen name="signUp" component={SignUp} />
+            <Stack.Screen name="login" component={Login} />
+            <Stack.Screen name="ribbon" component={Ribbon} />
             
-        </Navigator>
+        </Stack.Navigator>
     );
 };
 

@@ -4,15 +4,15 @@ import Ribbon from "../screens/ribbon";
 import DashBoard from "../screens/dashBoard";
 import Tabs from "./tabs";
 
-const { Navigator, Screen } = createStackNavigator();
+const Stack = createStackNavigator();
 
 const AppStack: FC = () => {
     return (
-        <Navigator screenOptions={{headerShown: false}}>
-            <Screen name="ribbon" component={Ribbon} />
-            <Screen name="dashBoard" component={DashBoard} />
-            <Screen name="tab" component={Tabs} />
-        </Navigator>
+        <Stack.Navigator screenOptions={{headerShown: false}}>
+            <Stack.Screen name="ribbon" component={Ribbon} />
+            <Stack.Screen name="dashBoard" component={DashBoard} />
+            <Stack.Screen name="tab" component={Tabs} />
+        </Stack.Navigator>
     );
 };
 

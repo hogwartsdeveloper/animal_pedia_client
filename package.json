@@ -12,9 +12,9 @@
   "dependencies": {
     "@expo-google-fonts/poppins": "^0.2.2",
     "@expo-google-fonts/space-mono": "^0.2.2",
-    "@react-navigation/bottom-tabs": "^5.11.15",
-    "@react-navigation/native": "^5.9.8",
-    "@react-navigation/stack": "^5.14.9",
+    "@react-navigation/bottom-tabs": "^6.2.0",
+    "@react-navigation/native": "^6.0.8",
+    "@react-navigation/stack": "^6.1.1",
     "@types/react-redux": "^7.1.22",
     "axios": "^0.25.0",
     "expo": "~44.0.0",
